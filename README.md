@@ -2,17 +2,17 @@
 
 Projeto de automação de testes BDD para o site Starbugs, focado em práticas de QA Moderno.
 
-🤘 Sobre
+#🤘 Sobre
 Repositório do projeto de testes automatizados do sistema Startbugs, construído no curso Cucumber eXperience!
 
-💻 Tecnologias
+#💻 Tecnologias
 Ruby
 Capybara
 RSpec
 Cucumber
 Selenium WebDriver
 
-🤖 Como executar
+#🤖 Como executar
 Clonar o repositório, instalar as dependências
 bundle install
 Executar testes de regressão
