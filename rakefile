@@ -1,0 +1,10 @@
+desc 'Executa os testes de pedido e gera o JSON'
+task :pedido do
+  sh 'bundle exec cucumber --format json --out report.json'
+  puts "✅ Testes finalizados! O arquivo report.json foi atualizado."
+end
+
+desc 'Executa todos os testes do projeto'
+task :all do
+  sh 'bundle exec cucumber --format json --out report_full.json'
+end
