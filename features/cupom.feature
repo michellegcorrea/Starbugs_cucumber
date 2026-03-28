@@ -19,14 +19,25 @@ Funcionalidade: Uso de cupons no Checkout
     Entao o valor da compra deve ser atualizado para "R$ 25,99"
 
 
-    Cenário: Cupom Expirado:
+    # Cenário: Cupom Expirado:
 
-    Quando aplico o seguinte cupom:"PROMO20"
-        Entao devo ver a notificação de "Cupom expirado!"
-            E o valor final da compra deve permanecer o mesmo
+    # Quando aplico o seguinte cupom:"PROMO20"
+    #     Entao devo ver a notificação de "Cupom expirado!"
+    #         E o valor final da compra deve permanecer o mesmo
 
-    Cenário:Cupom Inválido:
+    # Cenário:Cupom Inválido:
 
-    Quando aplico o seguinte cupom:"PROMO100"
-        Entao devo ver a notificação de "Cupom inválido!"
-            E o valor final da compra deve permanecer o mesmo
+    # Quando aplico o seguinte cupom:"PROMO100"
+    #     Entao devo ver a notificação de "Cupom inválido!"
+    #         E o valor final da compra deve permanecer o mesmo
+@ddt
+    Esquema do Cenário: Tentativa de aplicar o desconto
+
+    Quando aplico o seguinte cupom:"<cupom>"
+        Entao devo ver a notificação de "<saida>"
+        E o valor final da compra deve permanecer o mesmo
+
+Exemplos:
+| cupom   | saida          |
+| PROMO20 | Cupom expirado!|
+| PROMO100| Cupom inválido!|
